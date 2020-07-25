@@ -15,3 +15,13 @@ body{
 .footer{
     background-color: #d1c4e9;
 }
+.media{
+    padding: 2%;
+}
+
+.card .card-header{
+    color: white;
+}
+.card .guests{
+    padding: 1%;
+}
