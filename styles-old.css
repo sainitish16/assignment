@@ -57,3 +57,14 @@ body{
     bottom: 0px;
     z-index: 1;
 }
+
+.modal-header{
+    background-color: #512DA8;
+    color: white;
+}
+.modal-header .close{
+    color: white;
+}
+.modal-body{
+    background-color: #e3d3ff;
+}

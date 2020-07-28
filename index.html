@@ -10,14 +10,14 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./styles-old.css">
 
 
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
 </head>
 <body>
-    <nav class="navbar navbar-dark navbar-expand-sm bg-primary fixed-top">
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
         <div class="container">
 
             <a class="navbar-brand mr-auto" href="#"><img src="img/logo.png" height="30" width="41"></a><a class="navbar-brand" href="#">Ristorante Con Fusion</a>
@@ -36,10 +36,21 @@
                         </ul>     
                         <ul class="navbar-nav ml-auto">
                             <span class="navbar-text">
-                                <a data-toggle="modal" data-target="#loginModal">
-                                <span class="fa fa-sign-in"></span> Login</a>
+                                <a id="loginModelTrigger">
+                                    <span class="fa fa-sign-in"></span> Login
+                                </a>
                             </span>
-                        </ul>       
+                        </ul>     
+                        <script>
+                            $(document).ready(function(){
+                                $('#loginModelTrigger').on('click',function(){
+                                    $('#loginModal').modal('show');
+                                })
+                                $('#reserveModelTrigger').on('click',function(){
+                                    $('#reserveModel').modal('show');
+                                })
+                            })
+                        </script>  
                 </div>
             </div>
         </div>
@@ -81,7 +92,7 @@
         </div>
     </div>
     <!-- Reserve table model -->
-    <div id="guestsTable" class="modal fade" role="dialog">
+    <div id="reserveModel" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <!-- Modal content-->
             <div class="modal-content">
@@ -90,8 +101,6 @@
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <div class="card" id="guests-data">
-                        <div class="card-body">
                             <form >
                                 <div class="form-group row">
                                     <label for="feedback" class="col-md-2 col-form-label">Number of Guests</label>
@@ -156,9 +165,7 @@
                                     </div>
                                 </div>
                             </form>
-                            
-                        </div>
-                    </div>
+                        
                 </div>
             </div>
         </div>
@@ -179,8 +186,7 @@
                 
                 <div class="col-12 col-sm">
                     <div class="col-12 col-sm align-self-center">
-                        <a role="button" class="btn btn-block nav-link btn-warning"
-                        data-toggle="modal" href="#guestsTable">Reserve Table</a>
+                        <a role="button" id="reserveModelTrigger" class="btn btn-block nav-link btn-warning">Reserve Table</a>
                     </div>
                 </div>
             </div>
