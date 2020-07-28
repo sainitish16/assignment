@@ -9,7 +9,7 @@ body{
 
 .jumbotron{
     background-color: #9575cd;
-    color: white;
+    color: rgb(247, 221, 221);
 }
 
 .footer{
@@ -24,4 +24,11 @@ body{
 }
 .card .guests{
     padding: 1%;
+}
+
+.aboutusPage .tab-content{
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
 }
